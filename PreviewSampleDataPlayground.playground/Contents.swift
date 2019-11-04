@@ -28,7 +28,10 @@ let items = decoded.managerSpecials.map { LayoutItem(width: $0.width, height: $0
 
 items.map { print(String(format:"(%2.f, %2.f)", $0.width, $0.height)) }
 
+import UIKit
+let view = ManagerSpecialsView(frame: CGRect(x: 0, y: 0, width: 100, height: 600))
+view.backgroundColor = .white
+view.items = items
+
 import PlaygroundSupport
-let viewController = PreviewViewController()
-PlaygroundPage.current.liveView = viewController
-viewController.items = items
+PlaygroundPage.current.liveView = view

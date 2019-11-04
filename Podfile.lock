@@ -1,11 +1,13 @@
 PODS:
   - Nimble (8.0.4)
   - PromiseKit/CorePromise (6.11.0)
+  - PromiseKit/Foundation (6.11.0):
+    - PromiseKit/CorePromise
   - Quick (2.2.0)
 
 DEPENDENCIES:
   - Nimble
-  - PromiseKit/CorePromise (~> 6.8)
+  - PromiseKit/Foundation (~> 6.0)
   - Quick
 
 SPEC REPOS:
@@ -19,6 +21,6 @@ SPEC CHECKSUMS:
   PromiseKit: e4863d06976e7dee5e41c04fc7371c16b3600292
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
 
-PODFILE CHECKSUM: 5eee625ca3eec29ccc69c1aa6e8ef1140e8882da
+PODFILE CHECKSUM: ec3eefed66cde999568dfd3ca8ba7b27983e653c
 
 COCOAPODS: 1.7.5

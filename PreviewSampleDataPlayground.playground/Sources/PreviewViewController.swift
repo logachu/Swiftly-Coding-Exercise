@@ -7,45 +7,38 @@ public typealias LayoutItem = CGSize
 
 extension LayoutItem {
     /// A funtion to scale each item from canvasUnits to deviceUnits
-    func scaled(to factor: CGFloat) -> LayoutItem {
+    func scaled(by factor: CGFloat) -> LayoutItem {
         return LayoutItem(width: self.width * factor, height: self.height * factor)
     }
 }
 
-// With 20:20 hindsight, this view controller should have just been NSView or UIView but I started from the
-// single view playground template and didn't questions it 🤷🏻‍♂️
-
-/// A view controller to show the shapes of all of the items in a vertical column.
-public class PreviewViewController : UIViewController {
-    public var items: [LayoutItem] = [] { didSet { updateLayout() }}
-  
-    func clearLayout() {
-        for subview in view.subviews {
-            subview.removeFromSuperview()
+public class ManagerSpecialsView: UIView {
+    public var items: [LayoutItem] = [] { didSet { setNeedsDisplay() }}
+    
+    private func layout(for viewHeight: CGFloat) -> [CGRect] {
+        let spacing = CGFloat(2)
+        let totalItemHeights = items.map { $0.height }
+                                    .reduce(CGFloat(spacing)) { result, height in result + height + spacing }
+        let scaleFactor = viewHeight / totalItemHeights
+        let scaledSpacing = spacing * scaleFactor
+        var bottom = scaledSpacing
+        var itemRects: [CGRect] = []
+        for item in items {
+            let scaledItem = item.scaled(by: scaleFactor)
+            itemRects.append(CGRect(x: scaledSpacing, y: bottom, width: scaledItem.width, height: scaledItem.height))
+            bottom += scaledSpacing + scaledItem.height
         }
+        return itemRects
     }
     
-    func updateLayout() {
-        clearLayout()
-        view.backgroundColor = .white
-        let spacingInCanvasUnits = CGFloat(1)
-        let totalHeightInCanvasUnits = items
-            .map { $0.height }
-            .reduce(CGFloat(spacingInCanvasUnits)) { result, itemHeight in
-                return result + itemHeight + spacingInCanvasUnits
-            }
-        let deviceUnit = self.view.bounds.size.height / totalHeightInCanvasUnits
-        let spacing = spacingInCanvasUnits * deviceUnit
-        var origin = CGPoint(x:spacing, y: spacing)
-        
-        for item in items {
-            let itemView = UIView()
-            itemView.backgroundColor = .orange
-            let scaledSize = item.scaled(to: deviceUnit)
-            itemView.frame = CGRect(origin: origin, size: scaledSize)
-    
-            origin = CGPoint(x: origin.x, y: origin.y + scaledSize.height + spacing)
-            view.addSubview(itemView)
+    override public func draw(_ rect: CGRect) {
+        let itemRects = layout(for: rect.size.height)
+        guard let context = UIGraphicsGetCurrentContext() else { fatalError() }
+        context.beginPath()
+        context.setFillColor(UIColor.orange.cgColor)
+        for itemRect in itemRects {
+            context.addRect(itemRect)
         }
+        context.fillPath(using: .evenOdd)
     }
 }
