@@ -10,23 +10,21 @@ import UIKit
 
 let managersSpecialsCell = "ManagersSpecialsCell"
 
-class ManagersSpecialsViewController: UIViewController {
+public class ManagersSpecialsViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var specialsCollectionView: UICollectionView!
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
     }
-
-
 }
 
 extension ManagersSpecialsViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        3
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        6
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: managersSpecialsCell, for: indexPath) as? ManagersSpecialsCell else {
             assertionFailure("No cell registered for \(managersSpecialsCell)")
             return UICollectionViewCell()

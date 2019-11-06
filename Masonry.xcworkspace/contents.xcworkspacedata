@@ -5,6 +5,9 @@
       location = "group:/Users/barry/junk/Masonry/PreviewSampleDataPlayground.playground">
    </FileRef>
    <FileRef
+      location = "group:/Users/barry/junk/Masonry/ManagersSpecialsPlayground.playground">
+   </FileRef>
+   <FileRef
       location = "group:Masonry.xcodeproj">
    </FileRef>
    <FileRef

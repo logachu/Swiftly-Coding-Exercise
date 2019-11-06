@@ -38,6 +38,16 @@
                ReferencedContainer = "container:Masonry.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4C68F70F2372A88D0003348C"
+               BuildableName = "ManagersSpecialsTests.xctest"
+               BlueprintName = "ManagersSpecialsTests"
+               ReferencedContainer = "container:Masonry.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
