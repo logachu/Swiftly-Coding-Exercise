@@ -10,7 +10,7 @@ import UIKit
 
 class ManagersSpecialsCell: UICollectionViewCell {
     @IBOutlet weak var photoView: UIImageView!
-    @IBOutlet weak var msrpLabel: UILabel!
+    @IBOutlet weak var originalPriceLabel: UILabel!
     @IBOutlet weak var specialPriceLabel: UILabel!
     @IBOutlet weak var itemNamelabel: UILabel!
     

@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ManagersSpecials.xcscheme_^#shared#^_</key>
+		<key>ManagerSpecials.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>6</integer>
@@ -17,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>4C68F7072372A88C0003348C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4CF795B52364C6C90012C4DE</key>
 		<dict>
 			<key>primary</key>

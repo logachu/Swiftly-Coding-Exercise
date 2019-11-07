@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lnv-W7-fc2">
-    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,19 +11,19 @@
         <!--ManagersSpecials-->
         <scene sceneID="5W8-rx-hKo">
             <objects>
-                <viewController storyboardIdentifier="ManagersSpecials" title="ManagersSpecials" id="Lnv-W7-fc2" customClass="ManagersSpecialsViewController" customModule="ManagersSpecials" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ManagerSpecials" title="ManagersSpecials" id="Lnv-W7-fc2" customClass="ManagerSpecialsViewController" customModule="ManagerSpecials" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s0B-yA-0oL">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manager's Specials" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGp-pr-MSZ" userLabel="Title Label">
-                                <rect key="frame" x="324.5" y="24" width="247" height="35.5"/>
+                                <rect key="frame" x="83.5" y="68" width="247" height="35.5"/>
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XzR-gx-I3T">
-                                <rect key="frame" x="44" y="79.5" width="808" height="313.5"/>
+                                <rect key="frame" x="0.0" y="123.5" width="414" height="738.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="5" minimumInteritemSpacing="5" id="bNz-j0-BpD">
                                     <size key="itemSize" width="100" height="100"/>
@@ -32,7 +32,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ManagersSpecialsCell" id="07I-Hs-KQ2" customClass="ManagersSpecialsCell" customModule="ManagersSpecials" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ManagersSpecialsCell" id="07I-Hs-KQ2" customClass="ManagersSpecialsCell" customModule="ManagerSpecials" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="202" height="202"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7Ok-PO-XQ2">
@@ -90,14 +90,14 @@
                                         <size key="customSize" width="202" height="202"/>
                                         <connections>
                                             <outlet property="itemNamelabel" destination="1dZ-K4-qxI" id="4Vj-WT-Oh5"/>
-                                            <outlet property="msrpLabel" destination="014-5w-fmR" id="Lk8-vy-C8v"/>
+                                            <outlet property="originalPriceLabel" destination="014-5w-fmR" id="Lk8-vy-C8v"/>
                                             <outlet property="photoView" destination="VKZ-Ne-HyI" id="jq3-nK-Z2L"/>
                                             <outlet property="specialPriceLabel" destination="taF-AA-9kz" id="uPV-6v-xfn"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AUH-gN-DoF">
-                                    <rect key="frame" x="0.0" y="0.0" width="808" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
                                 <connections>

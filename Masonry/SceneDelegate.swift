@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ManagersSpecials
+import ManagerSpecials
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            let bundle = Bundle(for: ManagersSpecialsViewController.self)
+            let bundle = Bundle(for: ManagerSpecialsViewController.self)
             let storyboard = UIStoryboard(name: "Main", bundle: bundle)
             let vc = storyboard.instantiateInitialViewController()
             window.rootViewController = vc

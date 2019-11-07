@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1FB496DF580879D748BB010A /* Pods_Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1808E9AD7931B49097F921DF /* Pods_Masonry.framework */; };
-		4C68F7112372A88D0003348C /* ManagersSpecials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C68F7082372A88C0003348C /* ManagersSpecials.framework */; };
+		4C68F7112372A88D0003348C /* ManagerSpecials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C68F7082372A88C0003348C /* ManagerSpecials.framework */; };
 		4C68F7182372A88D0003348C /* ManagersSpecialsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C68F7172372A88D0003348C /* ManagersSpecialsTests.swift */; };
 		4C68F71A2372A88D0003348C /* ManagersSpecials.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C68F70A2372A88C0003348C /* ManagersSpecials.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4C68F71D2372A88D0003348C /* ManagersSpecials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C68F7082372A88C0003348C /* ManagersSpecials.framework */; };
-		4C68F71E2372A88D0003348C /* ManagersSpecials.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C68F7082372A88C0003348C /* ManagersSpecials.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4C68F7262372A8CB0003348C /* ManagersSpecialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF795BD2364C6C90012C4DE /* ManagersSpecialsViewController.swift */; };
+		4C68F71D2372A88D0003348C /* ManagerSpecials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C68F7082372A88C0003348C /* ManagerSpecials.framework */; };
+		4C68F71E2372A88D0003348C /* ManagerSpecials.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C68F7082372A88C0003348C /* ManagerSpecials.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4C68F7262372A8CB0003348C /* ManagerSpecialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF795BD2364C6C90012C4DE /* ManagerSpecialsViewController.swift */; };
 		4C68F7272372A8CB0003348C /* ManagersSpecialsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF795DD2364D24D0012C4DE /* ManagersSpecialsCell.swift */; };
 		4C68F7282372A8F50003348C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF795BF2364C6C90012C4DE /* Main.storyboard */; };
+		4CDEC3762373CCB0005B589C /* ManagerSpecialsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEC3752373CCB0005B589C /* ManagerSpecialsModel.swift */; };
 		4CF795BA2364C6C90012C4DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF795B92364C6C90012C4DE /* AppDelegate.swift */; };
 		4CF795BC2364C6C90012C4DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF795BB2364C6C90012C4DE /* SceneDelegate.swift */; };
 		4CF795C32364C6CB0012C4DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CF795C22364C6CB0012C4DE /* Assets.xcassets */; };
@@ -62,7 +63,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4C68F71E2372A88D0003348C /* ManagersSpecials.framework in Embed Frameworks */,
+				4C68F71E2372A88D0003348C /* ManagerSpecials.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,17 +73,18 @@
 /* Begin PBXFileReference section */
 		1808E9AD7931B49097F921DF /* Pods_Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C31F8302367F1D200CF8F41 /* NetworkService-PromiseKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService-PromiseKit.swift"; sourceTree = "<group>"; };
-		4C68F7082372A88C0003348C /* ManagersSpecials.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ManagersSpecials.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C68F7082372A88C0003348C /* ManagerSpecials.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ManagerSpecials.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C68F70A2372A88C0003348C /* ManagersSpecials.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManagersSpecials.h; sourceTree = "<group>"; };
 		4C68F70B2372A88C0003348C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4C68F7102372A88D0003348C /* ManagersSpecialsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManagersSpecialsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C68F7102372A88D0003348C /* ManagerSpecialsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManagerSpecialsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C68F7172372A88D0003348C /* ManagersSpecialsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagersSpecialsTests.swift; sourceTree = "<group>"; };
 		4C68F7192372A88D0003348C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CDD3C01236FF87000E1A30A /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CDEC3752373CCB0005B589C /* ManagerSpecialsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerSpecialsModel.swift; sourceTree = "<group>"; };
 		4CF795B62364C6C90012C4DE /* Masonry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Masonry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF795B92364C6C90012C4DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CF795BB2364C6C90012C4DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4CF795BD2364C6C90012C4DE /* ManagersSpecialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagersSpecialsViewController.swift; sourceTree = "<group>"; };
+		4CF795BD2364C6C90012C4DE /* ManagerSpecialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerSpecialsViewController.swift; sourceTree = "<group>"; };
 		4CF795C02364C6C90012C4DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4CF795C22364C6CB0012C4DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CF795C52364C6CB0012C4DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -111,7 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C68F7112372A88D0003348C /* ManagersSpecials.framework in Frameworks */,
+				4C68F7112372A88D0003348C /* ManagerSpecials.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,7 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C68F71D2372A88D0003348C /* ManagersSpecials.framework in Frameworks */,
+				4C68F71D2372A88D0003348C /* ManagerSpecials.framework in Frameworks */,
 				1FB496DF580879D748BB010A /* Pods_Masonry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,7 +161,8 @@
 		4C68F7092372A88C0003348C /* ManagersSpecials */ = {
 			isa = PBXGroup;
 			children = (
-				4CF795BD2364C6C90012C4DE /* ManagersSpecialsViewController.swift */,
+				4CDEC3752373CCB0005B589C /* ManagerSpecialsModel.swift */,
+				4CF795BD2364C6C90012C4DE /* ManagerSpecialsViewController.swift */,
 				4CF795DD2364D24D0012C4DE /* ManagersSpecialsCell.swift */,
 				4CF795BF2364C6C90012C4DE /* Main.storyboard */,
 				4C68F70A2372A88C0003348C /* ManagersSpecials.h */,
@@ -195,8 +198,8 @@
 			children = (
 				4CF795B62364C6C90012C4DE /* Masonry.app */,
 				4CF795CC2364C6CB0012C4DE /* MasonryTests.xctest */,
-				4C68F7082372A88C0003348C /* ManagersSpecials.framework */,
-				4C68F7102372A88D0003348C /* ManagersSpecialsTests.xctest */,
+				4C68F7082372A88C0003348C /* ManagerSpecials.framework */,
+				4C68F7102372A88D0003348C /* ManagerSpecialsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -237,9 +240,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4C68F7072372A88C0003348C /* ManagersSpecials */ = {
+		4C68F7072372A88C0003348C /* ManagerSpecials */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C68F71F2372A88D0003348C /* Build configuration list for PBXNativeTarget "ManagersSpecials" */;
+			buildConfigurationList = 4C68F71F2372A88D0003348C /* Build configuration list for PBXNativeTarget "ManagerSpecials" */;
 			buildPhases = (
 				4C68F7032372A88C0003348C /* Headers */,
 				4C68F7042372A88C0003348C /* Sources */,
@@ -250,14 +253,14 @@
 			);
 			dependencies = (
 			);
-			name = ManagersSpecials;
+			name = ManagerSpecials;
 			productName = ManagersSpecials;
-			productReference = 4C68F7082372A88C0003348C /* ManagersSpecials.framework */;
+			productReference = 4C68F7082372A88C0003348C /* ManagerSpecials.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4C68F70F2372A88D0003348C /* ManagersSpecialsTests */ = {
+		4C68F70F2372A88D0003348C /* ManagerSpecialsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C68F7232372A88D0003348C /* Build configuration list for PBXNativeTarget "ManagersSpecialsTests" */;
+			buildConfigurationList = 4C68F7232372A88D0003348C /* Build configuration list for PBXNativeTarget "ManagerSpecialsTests" */;
 			buildPhases = (
 				4C68F70C2372A88D0003348C /* Sources */,
 				4C68F70D2372A88D0003348C /* Frameworks */,
@@ -269,9 +272,9 @@
 				4C68F7132372A88D0003348C /* PBXTargetDependency */,
 				4C68F7152372A88D0003348C /* PBXTargetDependency */,
 			);
-			name = ManagersSpecialsTests;
+			name = ManagerSpecialsTests;
 			productName = ManagersSpecialsTests;
-			productReference = 4C68F7102372A88D0003348C /* ManagersSpecialsTests.xctest */;
+			productReference = 4C68F7102372A88D0003348C /* ManagerSpecialsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		4CF795B52364C6C90012C4DE /* Masonry */ = {
@@ -356,8 +359,8 @@
 			targets = (
 				4CF795B52364C6C90012C4DE /* Masonry */,
 				4CF795CB2364C6CB0012C4DE /* MasonryTests */,
-				4C68F7072372A88C0003348C /* ManagersSpecials */,
-				4C68F70F2372A88D0003348C /* ManagersSpecialsTests */,
+				4C68F7072372A88C0003348C /* ManagerSpecials */,
+				4C68F70F2372A88D0003348C /* ManagerSpecialsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -482,7 +485,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C68F7262372A8CB0003348C /* ManagersSpecialsViewController.swift in Sources */,
+				4C68F7262372A8CB0003348C /* ManagerSpecialsViewController.swift in Sources */,
+				4CDEC3762373CCB0005B589C /* ManagerSpecialsModel.swift in Sources */,
 				4C68F7272372A8CB0003348C /* ManagersSpecialsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,7 +521,7 @@
 /* Begin PBXTargetDependency section */
 		4C68F7132372A88D0003348C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4C68F7072372A88C0003348C /* ManagersSpecials */;
+			target = 4C68F7072372A88C0003348C /* ManagerSpecials */;
 			targetProxy = 4C68F7122372A88D0003348C /* PBXContainerItemProxy */;
 		};
 		4C68F7152372A88D0003348C /* PBXTargetDependency */ = {
@@ -527,7 +531,7 @@
 		};
 		4C68F71C2372A88D0003348C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4C68F7072372A88C0003348C /* ManagersSpecials */;
+			target = 4C68F7072372A88C0003348C /* ManagerSpecials */;
 			targetProxy = 4C68F71B2372A88D0003348C /* PBXContainerItemProxy */;
 		};
 		4CF795CE2364C6CB0012C4DE /* PBXTargetDependency */ = {
@@ -881,7 +885,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4C68F71F2372A88D0003348C /* Build configuration list for PBXNativeTarget "ManagersSpecials" */ = {
+		4C68F71F2372A88D0003348C /* Build configuration list for PBXNativeTarget "ManagerSpecials" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C68F7202372A88D0003348C /* Debug */,
@@ -890,7 +894,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C68F7232372A88D0003348C /* Build configuration list for PBXNativeTarget "ManagersSpecialsTests" */ = {
+		4C68F7232372A88D0003348C /* Build configuration list for PBXNativeTarget "ManagerSpecialsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C68F7242372A88D0003348C /* Debug */,
