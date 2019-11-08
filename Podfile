@@ -4,7 +4,6 @@ platform :ios, '13.0'
 target 'Masonry' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod "PromiseKit/Foundation", "~> 6.0"
   
   # Pods for Masonry
 
@@ -13,5 +12,10 @@ target 'Masonry' do
     pod 'Quick'
     pod 'Nimble'
   end
+end
 
+target 'ManagerSpecials' do
+  use_frameworks!
+  pod "PromiseKit/Foundation", "~> 6.0"
+  pod 'SDWebImage', '~> 5.0'
 end

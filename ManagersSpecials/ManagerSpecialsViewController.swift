@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 let managersSpecialsCell = "ManagersSpecialsCell"
 
@@ -43,7 +44,9 @@ extension ManagerSpecialsViewController: UICollectionViewDataSource {
         cell.itemNamelabel.text = special.displayName
         cell.originalPriceLabel.text = special.originalPrice
         cell.specialPriceLabel.text = special.price
+        cell.photoView.sd_setImage(with: URL(string: special.imageUrl), placeholderImage: UIImage(named: "placeholder"))
     }
+    
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         specials.count
     }
