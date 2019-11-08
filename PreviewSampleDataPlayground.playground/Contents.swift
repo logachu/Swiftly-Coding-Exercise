@@ -17,6 +17,7 @@ struct ManagerSpecialsData: Decodable {
 struct ManagerSpecials: Decodable {
     let width: Int
     let height: Int
+    let imageUrl: String
 }
 
 // I downloaded the sample data from https://prestoq.com/ios-coding-challenge and put in and a sample.json file

@@ -19,10 +19,13 @@ class ManagersSpecialsCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         layer.cornerRadius = ManagersSpecialsCell.cornerRadius
-        layer.shadowRadius = 20
+        layer.shadowRadius = 15
         layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOpacity = 0.1;
-        layer.shadowOffset = CGSize(width: 0,height: 2);
+        layer.shadowOpacity = 0.2
+        layer.shadowOffset = CGSize(width: 0,height: 10)
+        layer.borderColor = UIColor(white: 0.85, alpha: 1).cgColor
+        layer.borderWidth = 1
+        
         
     }
     

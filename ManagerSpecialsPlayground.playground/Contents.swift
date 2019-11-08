@@ -14,6 +14,7 @@ import PlaygroundSupport
 let bundle = Bundle(for: ManagerSpecialsViewController.self)
 let storyboard = UIStoryboard(name: "Main", bundle: bundle)
 let vc = storyboard.instantiateInitialViewController() as! ManagerSpecialsViewController
+vc.preferredContentSize = CGSize(width: 414, height: 896) // iPHone 11 Xr
 PlaygroundPage.current.liveView = vc
 
 let model: ManagerSpecials = try! {
@@ -26,4 +27,3 @@ let model: ManagerSpecials = try! {
 }()
 vc.canvasUnit = model.canvasUnit
 vc.specials = model.managerSpecials
-

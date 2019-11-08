@@ -15,6 +15,8 @@ public class ManagerSpecialsViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var specialsCollectionView: UICollectionView!
     
+    let spacing = CGFloat(8)
+    
     public var canvasUnit: UInt = 1 { didSet { specialsCollectionView.collectionViewLayout.invalidateLayout() } }
     public var specials: [Special] = []  {
         willSet { modelDiffs = newValue.difference(from:specials) }
@@ -24,8 +26,9 @@ public class ManagerSpecialsViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 6
-        layout.minimumInteritemSpacing = 6
+        layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
+        layout.minimumLineSpacing = spacing
+        layout.minimumInteritemSpacing = spacing
         layout.scrollDirection = .vertical
         specialsCollectionView.collectionViewLayout = layout
         specialsCollectionView.delegate = self
@@ -66,7 +69,7 @@ extension ManagerSpecialsViewController: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         let special = specials[indexPath.row]
-        let deviceUnit = collectionView.bounds.size.width / CGFloat(16)
+        let deviceUnit = CGFloat(floor(collectionView.bounds.size.width - (5*spacing)) / 16.0)
         return CGSize(width: CGFloat(special.width) * deviceUnit, height: CGFloat(special.height) * deviceUnit)
     }
 }
