@@ -1,6 +1,7 @@
 //: A UIKit based Playground for presenting user interface
   
 import UIKit
+import Combine
 import ManagerSpecials
 import PlaygroundSupport
 
@@ -17,13 +18,24 @@ let vc = storyboard.instantiateInitialViewController() as! ManagerSpecialsViewCo
 vc.preferredContentSize = CGSize(width: 414, height: 896) // iPHone 11 Xr
 PlaygroundPage.current.liveView = vc
 
-let model: ManagerSpecials = try! {
-    let url = Bundle.main.url(forResource: "sampledata", withExtension: "json")!
-    let data = try Data(contentsOf: url)
-    let decoder = JSONDecoder()
-    decoder.keyDecodingStrategy = .convertFromSnakeCase
-    let specials = try decoder.decode(ManagerSpecials.self, from: data)
-    return specials
-}()
-vc.canvasUnit = model.canvasUnit
-vc.specials = model.managerSpecials
+vc.model = ManagerSpecialsModel()
+//vc.model = ManagerSpecialsModel(api: SwiftlyAPIMock())
+
+func testAPIMock() {
+    let api = SwiftlyAPIMock()
+    _ = api.fetchManagerSpecials()
+        .decode(type: ManagerSpecials.self, decoder: JSONDecoder())
+        .sink(receiveCompletion: { completion in
+            switch completion {
+            case .failure(let error):
+                print("Failure: \(error.localizedDescription)")
+                assertionFailure()
+            case .finished: break
+            }
+         },
+         receiveValue: { value in
+            print(value)
+         }
+    )
+}
+//testAPIMock()
