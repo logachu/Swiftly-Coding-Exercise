@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import ManagersSpecials
+@testable import ManagerSpecials
 
 class ManagersSpecialsTests: XCTestCase {
 
