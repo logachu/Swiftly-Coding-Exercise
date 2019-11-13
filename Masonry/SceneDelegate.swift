@@ -22,7 +22,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let window = UIWindow(windowScene: windowScene)
             let bundle = Bundle(for: ManagerSpecialsViewController.self)
             let storyboard = UIStoryboard(name: "Main", bundle: bundle)
-            let vc = storyboard.instantiateInitialViewController()
+            guard let vc = storyboard.instantiateInitialViewController() as? ManagerSpecialsViewController  else {
+                fatalError("Dude, you must have changed the classname of ManagersSpecialsViewController")
+            }
+            vc.model = ManagerSpecialsModel()
             window.rootViewController = vc
             self.window = window
             window.makeKeyAndVisible()
