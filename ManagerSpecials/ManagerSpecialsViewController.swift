@@ -15,6 +15,7 @@ let managerSpecialsCell = "ManagerSpecialsCell"
 public class ManagerSpecialsViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var specialsCollectionView: UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     let spacing = CGFloat(8)
 
@@ -42,9 +43,12 @@ public class ManagerSpecialsViewController: UIViewController {
         managerSpecials
             .sink { [unowned self] _ in self.update() }
             .store(in: &disposables)
+        
+        activityIndicator.startAnimating()
     }
     
     func update() {
+        activityIndicator.stopAnimating()
         specialsCollectionView.reloadData()
     }
 }
