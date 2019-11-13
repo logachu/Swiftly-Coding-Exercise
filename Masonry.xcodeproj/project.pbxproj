@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1FB496DF580879D748BB010A /* Pods_Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1808E9AD7931B49097F921DF /* Pods_Masonry.framework */; };
+		35B005BF2C3F94C5882DB6EC /* Pods_Masonry_ManagerSpecials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DD6E28B95D0EE41F48ED583 /* Pods_Masonry_ManagerSpecials.framework */; };
 		4C24785E2375D140003E370F /* SwiftlyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C24785D2375D140003E370F /* SwiftlyAPI.swift */; };
 		4C68F7112372A88D0003348C /* ManagerSpecials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C68F7082372A88C0003348C /* ManagerSpecials.framework */; };
 		4C68F7182372A88D0003348C /* ManagersSpecialsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C68F7172372A88D0003348C /* ManagersSpecialsTests.swift */; };
@@ -24,8 +25,6 @@
 		4CF795C32364C6CB0012C4DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CF795C22364C6CB0012C4DE /* Assets.xcassets */; };
 		4CF795C62364C6CB0012C4DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF795C42364C6CB0012C4DE /* LaunchScreen.storyboard */; };
 		4CF795D12364C6CB0012C4DE /* MasonryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF795D02364C6CB0012C4DE /* MasonryTests.swift */; };
-		6C00112931B76E9D7328768C /* Pods_ManagerSpecials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E74619D9712537173F80E21 /* Pods_ManagerSpecials.framework */; };
-		D90A600A6B04F86BC1E3F4A3 /* Pods_MasonryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7972CCCB330328A441635E42 /* Pods_MasonryTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +73,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0DD6E28B95D0EE41F48ED583 /* Pods_Masonry_ManagerSpecials.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Masonry_ManagerSpecials.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B5CE6220B336C503BC0602 /* Pods-ManagerSpecials.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManagerSpecials.debug.xcconfig"; path = "Target Support Files/Pods-ManagerSpecials/Pods-ManagerSpecials.debug.xcconfig"; sourceTree = "<group>"; };
 		1808E9AD7931B49097F921DF /* Pods_Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA812672E7B06304D3B937A /* Pods-ManagerSpecials.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManagerSpecials.release.xcconfig"; path = "Target Support Files/Pods-ManagerSpecials/Pods-ManagerSpecials.release.xcconfig"; sourceTree = "<group>"; };
@@ -102,12 +102,10 @@
 		4CF795D22364C6CB0012C4DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CF795DC2364CB470012C4DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		4CF795DD2364D24D0012C4DE /* ManagersSpecialsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagersSpecialsCell.swift; sourceTree = "<group>"; };
-		7972CCCB330328A441635E42 /* Pods_MasonryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MasonryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E74619D9712537173F80E21 /* Pods_ManagerSpecials.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ManagerSpecials.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7AD9D05777250D1A14A159 /* Pods-Masonry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Masonry.release.xcconfig"; path = "Target Support Files/Pods-Masonry/Pods-Masonry.release.xcconfig"; sourceTree = "<group>"; };
 		A08237E76EAFBB6C70E2CDB3 /* Pods-Masonry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Masonry.debug.xcconfig"; path = "Target Support Files/Pods-Masonry/Pods-Masonry.debug.xcconfig"; sourceTree = "<group>"; };
-		C109B591D108C39405DDEAA4 /* Pods-MasonryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasonryTests.release.xcconfig"; path = "Target Support Files/Pods-MasonryTests/Pods-MasonryTests.release.xcconfig"; sourceTree = "<group>"; };
-		D1A981FD142BC3A822964DF2 /* Pods-MasonryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasonryTests.debug.xcconfig"; path = "Target Support Files/Pods-MasonryTests/Pods-MasonryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C90D1F9A54FC7AFBEFBCDA63 /* Pods-Masonry-ManagerSpecials.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Masonry-ManagerSpecials.debug.xcconfig"; path = "Target Support Files/Pods-Masonry-ManagerSpecials/Pods-Masonry-ManagerSpecials.debug.xcconfig"; sourceTree = "<group>"; };
+		CF08EB6F6591D7C9B722CEB2 /* Pods-Masonry-ManagerSpecials.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Masonry-ManagerSpecials.release.xcconfig"; path = "Target Support Files/Pods-Masonry-ManagerSpecials/Pods-Masonry-ManagerSpecials.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C00112931B76E9D7328768C /* Pods_ManagerSpecials.framework in Frameworks */,
+				35B005BF2C3F94C5882DB6EC /* Pods_Masonry_ManagerSpecials.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +138,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D90A600A6B04F86BC1E3F4A3 /* Pods_MasonryTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,10 +149,10 @@
 			children = (
 				A08237E76EAFBB6C70E2CDB3 /* Pods-Masonry.debug.xcconfig */,
 				9A7AD9D05777250D1A14A159 /* Pods-Masonry.release.xcconfig */,
-				D1A981FD142BC3A822964DF2 /* Pods-MasonryTests.debug.xcconfig */,
-				C109B591D108C39405DDEAA4 /* Pods-MasonryTests.release.xcconfig */,
 				11B5CE6220B336C503BC0602 /* Pods-ManagerSpecials.debug.xcconfig */,
 				1FA812672E7B06304D3B937A /* Pods-ManagerSpecials.release.xcconfig */,
+				C90D1F9A54FC7AFBEFBCDA63 /* Pods-Masonry-ManagerSpecials.debug.xcconfig */,
+				CF08EB6F6591D7C9B722CEB2 /* Pods-Masonry-ManagerSpecials.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -166,8 +163,7 @@
 				4C03F45B23747F640044B365 /* SDWebImage.framework */,
 				4CDD3C01236FF87000E1A30A /* Quick.framework */,
 				1808E9AD7931B49097F921DF /* Pods_Masonry.framework */,
-				7972CCCB330328A441635E42 /* Pods_MasonryTests.framework */,
-				7E74619D9712537173F80E21 /* Pods_ManagerSpecials.framework */,
+				0DD6E28B95D0EE41F48ED583 /* Pods_Masonry_ManagerSpecials.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -327,11 +323,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CF795D82364C6CB0012C4DE /* Build configuration list for PBXNativeTarget "MasonryTests" */;
 			buildPhases = (
-				760A5FB508FE50CE23720AD1 /* [CP] Check Pods Manifest.lock */,
 				4CF795C82364C6CB0012C4DE /* Sources */,
 				4CF795C92364C6CB0012C4DE /* Frameworks */,
 				4CF795CA2364C6CB0012C4DE /* Resources */,
-				F099AD9ACDEF90DA0C7C7261 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -443,28 +437,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Masonry/Pods-Masonry-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		760A5FB508FE50CE23720AD1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MasonryTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A8D161AAAF8E3B3737599F97 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -480,7 +452,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ManagerSpecials-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Masonry-ManagerSpecials-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -507,23 +479,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F099AD9ACDEF90DA0C7C7261 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MasonryTests/Pods-MasonryTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MasonryTests/Pods-MasonryTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MasonryTests/Pods-MasonryTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -613,7 +568,7 @@
 /* Begin XCBuildConfiguration section */
 		4C68F7202372A88D0003348C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11B5CE6220B336C503BC0602 /* Pods-ManagerSpecials.debug.xcconfig */;
+			baseConfigurationReference = C90D1F9A54FC7AFBEFBCDA63 /* Pods-Masonry-ManagerSpecials.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -642,7 +597,7 @@
 		};
 		4C68F7212372A88D0003348C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FA812672E7B06304D3B937A /* Pods-ManagerSpecials.release.xcconfig */;
+			baseConfigurationReference = CF08EB6F6591D7C9B722CEB2 /* Pods-Masonry-ManagerSpecials.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -892,7 +847,6 @@
 		};
 		4CF795D92364C6CB0012C4DE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1A981FD142BC3A822964DF2 /* Pods-MasonryTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -915,7 +869,6 @@
 		};
 		4CF795DA2364C6CB0012C4DE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C109B591D108C39405DDEAA4 /* Pods-MasonryTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
