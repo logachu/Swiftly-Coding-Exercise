@@ -21,14 +21,16 @@ public class ManagerSpecialsViewController: UIViewController {
 
     public var model: ManagerSpecialsModel? = nil {
         didSet {
-            model?.$managerSpecials.subscribe(managerSpecials).store(in: &disposables)
+            model?.$managerSpecials
+                .map(ManagersSpecialsViewModel.init(_:))
+                .subscribe(managerSpecials).store(in: &disposables)
             model?.refreshManagerSpecials()
         }
     }
-    public var managerSpecials = CurrentValueSubject<ManagerSpecials,Never>(ManagerSpecials(canvasUnit: 1, managerSpecials: []))
+    public var managerSpecials = CurrentValueSubject<ManagersSpecialsViewModel,Never>(ManagersSpecialsViewModel.initialValue)
     private var disposables = Set<AnyCancellable>()
     var canvasUnit: UInt { managerSpecials.value.canvasUnit }
-    var specials: [Special] { managerSpecials.value.managerSpecials }
+    var specials: [SpecialViewModel] { managerSpecials.value.managerSpecials }
 
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -54,9 +56,9 @@ public class ManagerSpecialsViewController: UIViewController {
 }
 
 extension ManagerSpecialsViewController: UICollectionViewDataSource {
-    func configure(_ cell: ManagerSpecialsCell, with special: Special) {
+    func configure(_ cell: ManagerSpecialsCell, with special: SpecialViewModel) {
         cell.itemNamelabel.text = special.displayName
-        cell.originalPriceLabel.text = special.originalPrice
+        cell.originalPriceLabel.attributedText = special.originalPrice
         cell.specialPriceLabel.text = special.price
         cell.photoView.sd_setImage(with: URL(string: special.imageUrl), placeholderImage: UIImage(named: "placeholder"))
     }

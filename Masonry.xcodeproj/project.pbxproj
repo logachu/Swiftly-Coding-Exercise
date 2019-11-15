@@ -19,6 +19,7 @@
 		4C68F7272372A8CB0003348C /* ManagerSpecialsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF795DD2364D24D0012C4DE /* ManagerSpecialsCell.swift */; };
 		4C68F7282372A8F50003348C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF795BF2364C6C90012C4DE /* Main.storyboard */; };
 		4CAC62FF23748582007FE988 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CAC62FE23748582007FE988 /* Media.xcassets */; };
+		4CBF72AE237E704B0094E2E3 /* ManagerSpecialsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBF72AD237E704B0094E2E3 /* ManagerSpecialsViewModel.swift */; };
 		4CDEC3762373CCB0005B589C /* ManagerSpecialsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDEC3752373CCB0005B589C /* ManagerSpecialsModel.swift */; };
 		4CF795BA2364C6C90012C4DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF795B92364C6C90012C4DE /* AppDelegate.swift */; };
 		4CF795BC2364C6C90012C4DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF795BB2364C6C90012C4DE /* SceneDelegate.swift */; };
@@ -86,6 +87,7 @@
 		4C68F7172372A88D0003348C /* ManagersSpecialsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagersSpecialsTests.swift; sourceTree = "<group>"; };
 		4C68F7192372A88D0003348C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CAC62FE23748582007FE988 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		4CBF72AD237E704B0094E2E3 /* ManagerSpecialsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerSpecialsViewModel.swift; sourceTree = "<group>"; };
 		4CDD3C01236FF87000E1A30A /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CDEC3752373CCB0005B589C /* ManagerSpecialsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerSpecialsModel.swift; sourceTree = "<group>"; };
 		4CF795B62364C6C90012C4DE /* Masonry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Masonry.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +188,7 @@
 				4C68F70A2372A88C0003348C /* ManagersSpecials.h */,
 				4C68F70B2372A88C0003348C /* Info.plist */,
 				4CAC62FE23748582007FE988 /* Media.xcassets */,
+				4CBF72AD237E704B0094E2E3 /* ManagerSpecialsViewModel.swift */,
 			);
 			path = ManagerSpecials;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C68F7262372A8CB0003348C /* ManagerSpecialsViewController.swift in Sources */,
+				4CBF72AE237E704B0094E2E3 /* ManagerSpecialsViewModel.swift in Sources */,
 				4CDEC3762373CCB0005B589C /* ManagerSpecialsModel.swift in Sources */,
 				4C68F7272372A8CB0003348C /* ManagerSpecialsCell.swift in Sources */,
 				4C24785E2375D140003E370F /* SwiftlyAPI.swift in Sources */,
