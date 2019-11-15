@@ -25,8 +25,6 @@ class ManagerSpecialsCell: UICollectionViewCell {
         layer.shadowOffset = CGSize(width: 0,height: 10)
         layer.borderColor = UIColor(white: 0.85, alpha: 1).cgColor
         layer.borderWidth = 1
-        
-        
     }
     
     override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
