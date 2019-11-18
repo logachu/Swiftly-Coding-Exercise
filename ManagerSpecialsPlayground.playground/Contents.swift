@@ -1,6 +1,8 @@
 //: To speed up iterating on the view controller its packaged into a
 //: framework so it can be shared between a playground and an app
-//: project because its a lot quicker to iterate in a playground.
+//: project because its a lot quicker to iterate in a playground rather than
+//: waiting for a large project to build. In this case the project itself
+//: is so simple, it doesn't really make much difference.
 //:
 //: Note: Updates to the framework must be re-built before the
 //: framework is re-run so select the ManagerSpecials scheme and hit
@@ -26,7 +28,7 @@ PlaygroundPage.current.liveView = vc
 
 //vc.model = ManagerSpecialsModel()
 vc.model = ManagerSpecialsModel(api: SwiftlyAPIMock())
-
+//:--------------------------------
 func testAPIMock() {
     let api = SwiftlyAPIMock()
     _ = api.fetchManagerSpecials()

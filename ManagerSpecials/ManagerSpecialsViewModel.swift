@@ -61,12 +61,12 @@ public struct CouponViewModel {
         let height = size.height
         let aspectRatio = width / height
 
-        if aspectRatio >= 2 { return .wide}
+        if aspectRatio > 2 { return .wide}
 
-        let small = (CGFloat(canvasUnit) / CGFloat(3))
+        let small = (CGFloat(canvasUnit) / CGFloat(4))
         if width <= small { return .small }
 
-        if aspectRatio > 0.5 && aspectRatio < 2 { return .squarish }
+        if aspectRatio > 0.5 && aspectRatio <= 2 { return .squarish }
 
         return .unknown
     }
