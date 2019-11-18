@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreGraphics
 import Combine
 import SDWebImage
 
@@ -83,6 +84,6 @@ extension ManagerSpecialsViewController: UICollectionViewDelegateFlowLayout {
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         let coupon = managerSpecials.value.managerSpecials[indexPath.row]
         let deviceUnit = CGFloat(floor(collectionView.bounds.size.width - (5*spacing)) / 16.0)
-        return CGSize(width: CGFloat(coupon.width) * deviceUnit, height: CGFloat(coupon.height) * deviceUnit)
+        return coupon.size.applying(CGAffineTransform.identity.scaledBy(x: deviceUnit, y: deviceUnit))
     }
 }

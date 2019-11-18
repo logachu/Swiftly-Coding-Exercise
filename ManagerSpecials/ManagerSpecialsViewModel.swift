@@ -28,8 +28,7 @@ public struct CouponViewModel {
     let originalPrice: NSAttributedString
     let price: String
     let imageUrl: String
-    let width: Int
-    let height: Int
+    let size: CGSize
     
     private static let strikeOutAttributes: [NSAttributedString.Key: Any] = [
         .strikethroughStyle: NSUnderlineStyle.single.rawValue,
@@ -41,7 +40,6 @@ public struct CouponViewModel {
         originalPrice = NSAttributedString(string: model.originalPrice, attributes: CouponViewModel.strikeOutAttributes)
         price = model.price
         imageUrl = model.imageUrl
-        width = model.width
-        height = model.height
+        size = CGSize(width: model.width, height: model.height)
     }
 }
