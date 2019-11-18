@@ -11,8 +11,6 @@ import CoreGraphics
 import Combine
 import SDWebImage
 
-let managerSpecialsCell = "ManagerSpecialsCell"
-
 public class ManagerSpecialsViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var specialsCollectionView: UICollectionView!
@@ -31,7 +29,7 @@ public class ManagerSpecialsViewController: UIViewController {
     public var managerSpecials = CurrentValueSubject<ManagersSpecialsViewModel,Never>(ManagersSpecialsViewModel.initialValue)
     private var disposables = Set<AnyCancellable>()
     var canvasUnit: UInt { managerSpecials.value.canvasUnit }
-    var specials: [CouponViewModel] { managerSpecials.value.managerSpecials }
+    var specials: [CouponViewModel] { managerSpecials.value.coupons }
 
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -57,23 +55,28 @@ public class ManagerSpecialsViewController: UIViewController {
 }
 
 extension ManagerSpecialsViewController: UICollectionViewDataSource {
-    func configure(_ cell: ManagerSpecialsCell, with special: CouponViewModel) {
+    func configure(_ cell: CouponCell, with special: CouponViewModel) {
+        if cell.photoView != nil {
+            cell.photoView.sd_setImage(with: URL(string: special.imageUrl), placeholderImage: UIImage(named: "placeholder"))
+        }
         cell.itemNamelabel.text = special.displayName
         cell.originalPriceLabel.attributedText = special.originalPrice
         cell.specialPriceLabel.text = special.price
-        cell.photoView.sd_setImage(with: URL(string: special.imageUrl), placeholderImage: UIImage(named: "placeholder"))
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        managerSpecials.value.managerSpecials.count
+        managerSpecials.value.coupons.count
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: managerSpecialsCell, for: indexPath) as? ManagerSpecialsCell else {
-            assertionFailure("No cell registered for \(managerSpecialsCell)")
+        let coupon = managerSpecials.value.coupons[indexPath.item]
+        let reuseIdentifier = CouponCell.reuseIdentifier(for: coupon.shape)
+        print(reuseIdentifier)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? CouponCell else {
+            assertionFailure("No cell registered for \(reuseIdentifier)")
             return UICollectionViewCell()
         }
-        configure(cell, with: managerSpecials.value.managerSpecials[indexPath.item])
+        configure(cell, with: managerSpecials.value.coupons[indexPath.item])
         return cell
     }
 }
@@ -82,7 +85,7 @@ extension ManagerSpecialsViewController: UICollectionViewDelegateFlowLayout {
     public func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let coupon = managerSpecials.value.managerSpecials[indexPath.row]
+        let coupon = managerSpecials.value.coupons[indexPath.row]
         let deviceUnit = CGFloat(floor(collectionView.bounds.size.width - (5*spacing)) / 16.0)
         return coupon.size.applying(CGAffineTransform.identity.scaledBy(x: deviceUnit, y: deviceUnit))
     }
