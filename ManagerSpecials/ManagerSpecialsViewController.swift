@@ -30,7 +30,7 @@ public class ManagerSpecialsViewController: UIViewController {
     public var managerSpecials = CurrentValueSubject<ManagersSpecialsViewModel,Never>(ManagersSpecialsViewModel.initialValue)
     private var disposables = Set<AnyCancellable>()
     var canvasUnit: UInt { managerSpecials.value.canvasUnit }
-    var specials: [SpecialViewModel] { managerSpecials.value.managerSpecials }
+    var specials: [CouponViewModel] { managerSpecials.value.managerSpecials }
 
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +56,7 @@ public class ManagerSpecialsViewController: UIViewController {
 }
 
 extension ManagerSpecialsViewController: UICollectionViewDataSource {
-    func configure(_ cell: ManagerSpecialsCell, with special: SpecialViewModel) {
+    func configure(_ cell: ManagerSpecialsCell, with special: CouponViewModel) {
         cell.itemNamelabel.text = special.displayName
         cell.originalPriceLabel.attributedText = special.originalPrice
         cell.specialPriceLabel.text = special.price
@@ -81,8 +81,8 @@ extension ManagerSpecialsViewController: UICollectionViewDelegateFlowLayout {
     public func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let special = managerSpecials.value.managerSpecials[indexPath.row]
+        let coupon = managerSpecials.value.managerSpecials[indexPath.row]
         let deviceUnit = CGFloat(floor(collectionView.bounds.size.width - (5*spacing)) / 16.0)
-        return CGSize(width: CGFloat(special.width) * deviceUnit, height: CGFloat(special.height) * deviceUnit)
+        return CGSize(width: CGFloat(coupon.width) * deviceUnit, height: CGFloat(coupon.height) * deviceUnit)
     }
 }

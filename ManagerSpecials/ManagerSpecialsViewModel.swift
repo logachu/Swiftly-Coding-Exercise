@@ -13,17 +13,17 @@ import UIKit
 
 public struct ManagersSpecialsViewModel {
     public let canvasUnit: UInt
-    public let managerSpecials: [SpecialViewModel]
+    public let managerSpecials: [CouponViewModel]
 
     static let initialValue = ManagersSpecialsViewModel(ManagerSpecials(canvasUnit: 1, managerSpecials: []))
     
     init(_ model: ManagerSpecials) {
         canvasUnit = model.canvasUnit
-        managerSpecials = model.managerSpecials.map(SpecialViewModel.init)
+        managerSpecials = model.managerSpecials.map(CouponViewModel.init)
     }
 }
 
-public struct SpecialViewModel {
+public struct CouponViewModel {
     let displayName: String
     let originalPrice: NSAttributedString
     let price: String
@@ -36,9 +36,9 @@ public struct SpecialViewModel {
         .strikethroughColor: UIColor.black
     ]
     
-    init(_ model: Special) {
+    init(_ model: Coupon) {
         displayName = model.displayName
-        originalPrice = NSAttributedString(string: model.originalPrice, attributes: SpecialViewModel.strikeOutAttributes)
+        originalPrice = NSAttributedString(string: model.originalPrice, attributes: CouponViewModel.strikeOutAttributes)
         price = model.price
         imageUrl = model.imageUrl
         width = model.width

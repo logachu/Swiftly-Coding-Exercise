@@ -24,10 +24,10 @@ import Combine
  */
 public struct ManagerSpecials: Decodable {
     public let canvasUnit: UInt
-    public let managerSpecials: [Special]
+    public let managerSpecials: [Coupon]
 }
 
-public struct Special: Decodable, Equatable {
+public struct Coupon: Decodable, Equatable {
     enum CodingKeys: String, CodingKey {
         case displayName = "display_name"
         case originalPrice = "original_price"
